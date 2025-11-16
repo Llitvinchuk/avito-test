@@ -1,0 +1,38 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  border: 1px solid transparent;
+}
+
+.tag--green {
+  border-color: #bbf7d0;
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.tag--red {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.tag--yellow {
+  border-color: #fef3c7;
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.tag--purple {
+  border-color: #e9d5ff;
+  background: #faf5ff;
+  color: #6b21a8;
+}
+
+.tag--gray {
+  border-color: #e5e7eb;
+  background: #f9fafb;
+  color: #4b5563;
+}

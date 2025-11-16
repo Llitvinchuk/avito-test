@@ -1,0 +1,70 @@
+.ad-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.ad-card__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ad-card__checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.ad-card__image-wrapper {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.ad-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ad-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ad-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ad-card__title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.ad-card__price {
+  font-weight: 700;
+}
+
+.ad-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.ad-card__tags {
+  display: flex;
+  gap: 6px;
+}

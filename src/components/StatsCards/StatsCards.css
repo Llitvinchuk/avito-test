@@ -1,0 +1,31 @@
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stats-card {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats-card__label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.stats-card__value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stats-card__hint {
+  font-size: 11px;
+  color: var(--text-muted);
+}

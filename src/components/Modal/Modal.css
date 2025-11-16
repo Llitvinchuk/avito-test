@@ -1,0 +1,40 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.modal {
+  width: 420px;
+  max-width: calc(100% - 32px);
+  background: var(--bg-elevated);
+  border-radius: 16px;
+  padding: 16px 16px 12px;
+  border: 1px solid var(--border);
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modal__header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.modal__close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modal__body {
+  font-size: 14px;
+}
