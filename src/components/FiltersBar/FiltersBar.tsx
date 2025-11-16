@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { STATUSES } from "../../utils/constants";
-
 import "./FiltersBar.css";
-import { AdStatus } from "../../api/types";
+import type { AdStatus } from "../../api/types";
 
 export interface FiltersState {
   statuses: AdStatus[];
@@ -11,14 +10,19 @@ export interface FiltersState {
   maxPrice: string;
   query: string;
   sortBy: "createdAt" | "price" | "priority";
-  sortDir: "asc" | "desc";
+  sortOrder: "asc" | "desc";
+}
+
+interface CategoryOption {
+  id: number;
+  name: string;
 }
 
 interface Props {
   value: FiltersState;
   onChange: (next: FiltersState) => void;
   onReset: () => void;
-  categories: string[];
+  categories: CategoryOption[];
   selectedCount: number;
   onBulkApprove: () => void;
   onBulkReject: () => void;
@@ -84,13 +88,13 @@ const FiltersBar: React.FC<Props> = ({
         <div className="filters__group">
           <span className="filters__label">Категория</span>
           <select
-            value={value.category}
-            onChange={(e) => onChange({ ...value, category: e.target.value })}
+            value={value.categoryId}
+            onChange={(e) => onChange({ ...value, categoryId: e.target.value })}
           >
             <option value="">Все</option>
             {categories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
               </option>
             ))}
           </select>
@@ -133,11 +137,11 @@ const FiltersBar: React.FC<Props> = ({
               <option value="priority">По приоритету</option>
             </select>
             <select
-              value={value.sortDir}
+              value={value.sortOrder}
               onChange={(e) =>
                 onChange({
                   ...value,
-                  sortDir: e.target.value as FiltersState["sortDir"],
+                  sortOrder: e.target.value as FiltersState["sortOrder"],
                 })
               }
             >
